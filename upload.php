@@ -1,6 +1,6 @@
 <?php
 // Penerima foto di server pribadi. Taruh di public_html/upload.php, buat folder uploads/ (chmod 755).
-$TOKEN = 'GANTI_TOKEN_RAHASIA';   // samakan dengan CONFIG.SERVER_UPLOAD.TOKEN
+$TOKEN = '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';   // samakan dengan CONFIG.SERVER_UPLOAD.TOKEN
 header('Content-Type: application/json');
 if (($_POST['token'] ?? '') !== $TOKEN) { http_response_code(403); echo '{"err":"token"}'; exit; }
 if (!isset($_FILES['file']) || $_FILES['file']['error'] !== 0) { http_response_code(400); echo '{"err":"file"}'; exit; }
